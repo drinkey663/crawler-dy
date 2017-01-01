@@ -1,5 +1,6 @@
 #coding=utf-8
 from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from time import sleep
 
 #driver = webdriver.PhantomJS(executable_path='/usr/local/src/phantomjs/bin/phantomjs')
@@ -11,7 +12,10 @@ from time import sleep
 #option.add_argument("--disable-bundled-ppapi-flash")
 #driver = webdriver.Chrome(executable_path='/usr/local/Cellar/chromedriver/2.27/bin/chromedriver', chrome_options=option)
 
-driver = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
+binary = FirefoxBinary('/usr/local/bin/firefox/firefox-bin')
+#driver = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver', firefox_binary=binary)
+driver = webdriver.Firefox(firefox_binary=binary)
+
 
 driver.get("https://www.douyu.com/cold/")
 
