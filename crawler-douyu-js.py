@@ -11,7 +11,7 @@ from time import sleep
 #option.add_argument("--disable-bundled-ppapi-flash")
 #driver = webdriver.Chrome(executable_path='/usr/local/Cellar/chromedriver/2.27/bin/chromedriver', chrome_options=option)
 
-driver = webdriver.Firefox(executable_path='/usr/local/Cellar/geckodriver')
+driver = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
 
 driver.get("https://www.douyu.com/cold/")
 
